@@ -112,6 +112,14 @@ test('photo replacement isolates new relationship and preserves original media',
   const doc=parse(await produced.file('word/document.xml').async('string'));
   const blip=blocks(doc)[slot.blockIndex].getElementsByTagNameNS('http://schemas.openxmlformats.org/drawingml/2006/main','blip')[slot.occurrence];
   assert.notEqual(blip.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','embed'),slot.originalRelationship);
+  let alternate=blip;
+  while(alternate&&alternate.localName!=='AlternateContent')alternate=alternate.parentNode;
+  assert.equal(alternate.localName,'AlternateContent','The image keeps its compatibility wrapper for alternate DOCX renderers');
+  const fallback=Array.from(alternate.childNodes).find(node=>node.nodeType===1&&node.localName==='Fallback');
+  assert.ok(fallback,'The image keeps its VML fallback');
+  const legacyImages=Array.from(fallback.getElementsByTagName('*')).filter(node=>node.hasAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','id'));
+  assert.ok(legacyImages.length,'The VML fallback still has an image reference');
+  for(const imageNode of legacyImages)assert.equal(imageNode.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','id'),blip.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','embed'),'Both DOCX render paths point to the new image');
 });
 
 test('filled report retains every image slot and requested cell values',async()=>{
