@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "template_path": "EXEMPLOS/- R.334.r01_NBR9653_2018-REV2.docx",
+  "output_directory": "pages/assets",
+  "manifest_name": "template-manifest.json",
+  "template_name": "template.docx",
+  "log_directory": "logs",
+  "visual": {
+    "brand": "OpenBlast",
+    "title": "Relatório Sismográfico",
+    "primary": "#e60012",
+    "header": "#354047"
+  },
+  "limits": {
+    "max_image_bytes": 25000000,
+    "max_project_bytes": 200000000
+  },
+  "sanitization": {
+    "fields": {
+      "period": "PERÍODO ",
+      "blastCaption1": "",
+      "blastCaption2": "",
+      "conclusion": "",
+      "conclusionFinal": ""
+    },
+    "text_replacements": {
+      "annexBlast": {
+        "from": "PP 120A1025",
+        "to": "PP [IDENTIFICAÇÃO]"
+      }
+    },
+    "clear_core_properties": ["title", "subject", "creator", "lastModifiedBy", "keywords", "lastPrinted", "revision"],
+    "clear_app_properties": ["Template", "Company", "TitlesOfParts", "HeadingPairs"],
+    "clear_custom_properties": true
+  },
+  "fields": [
+    {
+      "id": "period",
+      "label": "Período de monitoramento",
+      "blockIndex": 14,
+      "default": "",
+      "required": true,
+      "group": "identification",
+      "prefix": "PERÍODO ",
+      "type": "date",
+      "hint": "Selecione a data do monitoramento."
+    },
+    {
+      "id": "placeYear",
+      "label": "Cidade e ano",
+      "blockIndex": 24,
+      "default": "CRAÍBAS, 2026",
+      "required": true,
+      "group": "identification"
+    },
+    {
+      "id": "blastCaption1",
+      "label": "Figura 3.1 — Local do desmonte",
+      "blockIndex": 115,
+      "default": "Figura 3.1 – Local do desmonte – .",
+      "required": true,
+      "group": "blast"
+    },
+    {
+      "id": "blastCaption2",
+      "label": "Figura 3.2 — Local do desmonte",
+      "blockIndex": 131,
+      "default": "Figura 3.2 – Local do desmonte – .",
+      "required": true,
+      "group": "blast"
+    },
+    {
+      "id": "mapCaption",
+      "label": "Figura 4 — Perspectiva de distância",
+      "blockIndex": 137,
+      "default": "Figura 4 – Perspectiva de distância entre os desmontes e as comunidades acompanhadas.",
+      "required": true,
+      "group": "locations"
+    },
+    {
+      "id": "monitorCaption1",
+      "label": "Figura 5.1 — Monitoramento 01",
+      "blockIndex": 171,
+      "default": "Figura 5.1 – Local de monitoramento 01 com sismógrafo instalado.",
+      "required": true,
+      "group": "locations"
+    },
+    {
+      "id": "monitorCaption2",
+      "label": "Figura 5.2 — Monitoramento 02",
+      "blockIndex": 192,
+      "default": "Figura 5.2 – Local de monitoramento 02 com sismógrafo instalado.",
+      "required": true,
+      "group": "locations"
+    },
+    {
+      "id": "monitorCaption3",
+      "label": "Figura 5.3 — Monitoramento 03",
+      "blockIndex": 207,
+      "default": "Figura 5.3 – Local de monitoramento 03 com sismógrafo instalado.",
+      "required": true,
+      "group": "locations"
+    },
+    {
+      "id": "seismoCaption1",
+      "label": "Figura 6.1 — Sismograma 01",
+      "blockIndex": 245,
+      "default": "Figura 6.1 – Sismograma - Monitoramento 01.",
+      "required": true,
+      "group": "measurements"
+    },
+    {
+      "id": "seismoCaption2",
+      "label": "Figura 6.2 — Sismograma 02",
+      "blockIndex": 275,
+      "default": "Figura 6.2 – Sismograma - Monitoramento 02.",
+      "required": true,
+      "group": "measurements"
+    },
+    {
+      "id": "seismoCaption3",
+      "label": "Figura 6.3 — Sismograma 03",
+      "blockIndex": 305,
+      "default": "Figura 6.3 – Sismograma - Monitoramento 03.",
+      "required": true,
+      "group": "measurements"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusão técnica",
+      "blockIndex": 312,
+      "default": "",
+      "required": false,
+      "group": "conclusion",
+      "visible": false
+    },
+    {
+      "id": "conclusionFinal",
+      "label": "Considerações finais",
+      "blockIndex": 314,
+      "default": "",
+      "required": false,
+      "group": "conclusion",
+      "visible": false
+    },
+    {
+      "id": "annexBlast",
+      "label": "Identificação do desmonte no Anexo I",
+      "blockIndex": 323,
+      "default": "",
+      "required": false,
+      "group": "annexes",
+      "replacement": "PP 120A1025",
+      "visible": false
+    }
+  ],
+  "tables": [
+    {
+      "id": "company",
+      "label": "Tabela 1 — Empresa",
+      "blockIndex": 49,
+      "headerRows": 0,
+      "editableColumns": [
+        1
+      ],
+      "group": "identification"
+    },
+    {
+      "id": "blast",
+      "label": "Tabela 2 — Perfuração e desmonte",
+      "blockIndex": 98,
+      "headerRows": 1,
+      "editableColumns": [
+        2
+      ],
+      "repeatColumns": true,
+      "group": "blast",
+      "maxRepeatCount": 3
+    },
+    {
+      "id": "locations",
+      "label": "Tabela 3 — Coordenadas e distâncias",
+      "blockIndex": 150,
+      "headerRows": 2,
+      "repeatRows": true,
+      "group": "locations",
+      "multilineColumns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "instruments",
+      "label": "Tabela 4 — Sismógrafos",
+      "blockIndex": 155,
+      "headerRows": 1,
+      "repeatRows": true,
+      "group": "locations",
+      "inputTypes": {
+        "4": "date"
+      }
+    },
+    {
+      "id": "measurements",
+      "label": "Tabela 5 — Registros sismográficos",
+      "blockIndex": 215,
+      "headerRows": 3,
+      "repeatRows": true,
+      "group": "measurements"
+    },
+    {
+      "id": "companyConclusion",
+      "label": "Tabela 6 — Empresa",
+      "blockIndex": 317,
+      "headerRows": 0,
+      "editableColumns": [
+        1
+      ],
+      "group": "conclusion"
+    },
+    {
+      "id": "engineer",
+      "label": "Tabela 7 — Responsável técnico",
+      "blockIndex": 320,
+      "headerRows": 1,
+      "group": "conclusion",
+      "clearColumns": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "image_groups": [
+    {
+      "group": "blast",
+      "blocks": [
+        101,
+        116
+      ],
+      "labels": [
+        "Local do desmonte 1",
+        "Local do desmonte 2"
+      ],
+      "captions": [
+        "blastCaption1",
+        "blastCaption2"
+      ]
+    },
+    {
+      "group": "locations",
+      "blocks": [
+        136,
+        158,
+        173,
+        194
+      ],
+      "labels": [
+        "Mapa dos desmontes e monitoramentos",
+        "Monitoramento 01",
+        "Monitoramento 02",
+        "Monitoramento 03"
+      ],
+      "captions": [
+        "mapCaption",
+        "monitorCaption1",
+        "monitorCaption2",
+        "monitorCaption3"
+      ]
+    },
+    {
+      "group": "measurements",
+      "blocks": [
+        217,
+        247,
+        277
+      ],
+      "labels": [
+        "Sismograma 01",
+        "Sismograma 02",
+        "Sismograma 03"
+      ],
+      "captions": [
+        "seismoCaption1",
+        "seismoCaption2",
+        "seismoCaption3"
+      ]
+    },
+    {
+      "group": "annexes",
+      "blocks": [
+        327,
+        339,
+        355,
+        361,
+        385,
+        409
+      ],
+      "labels": [
+        "Plano de Fogo – Realizado",
+        "Tier-Up Plan – Temporização",
+        "Histograma - Carga",
+        "Certificado 01",
+        "Certificado 02",
+        "Certificado 03"
+      ]
+    },
+    {
+      "group": "conclusion",
+      "blocks": [
+        320
+      ],
+      "labels": [
+        "Assinatura do responsável técnico"
+      ],
+      "optional": true,
+      "sanitizePixels": true
+    }
+  ],
+  "repeatableSections": {
+    "maxBlasts": 3,
+    "blastPhoto": {
+      "templateRange": [
+        116,
+        131
+      ],
+      "insertBeforeBlock": 132,
+      "pageBreakBlock": 132,
+      "imageOffset": 0,
+      "captionOffset": 15,
+      "label": "Local do desmonte"
+    },
+    "blastAnnex": {
+      "fullRange": [
+        323,
+        356
+      ],
+      "planRange": [
+        323,
+        336
+      ],
+      "timingRange": [
+        338,
+        353
+      ],
+      "histogramRange": [
+        354,
+        356
+      ],
+      "pageBreakBlock": 356,
+      "insertBeforeBlock": 357,
+      "planImageOffset": 4,
+      "timingImageOffset": 16,
+      "histogramImageOffset": 32
+    }
+  }
+}

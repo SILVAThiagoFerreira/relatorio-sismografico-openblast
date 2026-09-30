@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.py[cod]
+*.docx
+!pages/assets/template.docx
+*.pdf
+*.log
+/analysis/
+/EXEMPLOS/
+/VISUAL/

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#38424b"><title>Relatório Sismográfico | OpenBlast</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="masthead"><a class="brand" href="./" aria-label="OpenBlast, início"><img src="assets/openblast.png" alt=""><span>Open<strong>Blast</strong></span></a><span>Ferramentas · US Vale Verde</span></header>
+<main>
+<div class="intro"><div><div class="hex" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 27h8l4-12 7 23 5-17 4 6h8M6 38h36M9 9v6m-3-3h6m23-3v6m-3-3h6"/></svg></div><h1>Relatório Sismográfico</h1><p>Preencha os dados, complete as tabelas e anexe as fotos para gerar seu relatório no modelo original.</p></div><a class="text-link" href="assets/template.docx" id="template-link" download>Baixar modelo original</a></div>
+<div class="projectbar"><label for="project-name">Nome do relatório<input id="project-name" value="Novo relatório" maxlength="150" autocomplete="off"></label><div class="project-actions"><button id="save-project" type="button">Salvar projeto</button><button id="import-project" type="button">Abrir projeto</button><input id="project-file" type="file" accept=".json,application/json" hidden></div></div>
+<nav class="steps" aria-label="Etapas do relatório"><button type="button" data-step="fields" class="active" aria-current="step"><span>1</span> Dados do relatório</button><button type="button" data-step="tables"><span>2</span> Tabelas</button><button type="button" data-step="photos"><span>3</span> Fotos e legendas</button><button type="button" data-step="review"><span>4</span> Revisão e geração</button></nav>
+<div id="status" class="status" role="status" aria-live="polite">Carregando modelo original…</div>
+<section id="fields-panel" class="panel" aria-labelledby="fields-title"><div class="section-heading"><h2 id="fields-title">Dados do relatório</h2><span>Campos variáveis do modelo</span></div><div id="fields-content" class="field-grid"></div></section>
+<section id="tables-panel" class="panel" hidden aria-labelledby="tables-title"><div class="section-heading"><h2 id="tables-title">Tabelas</h2><span>Digite ou cole células do Excel</span></div><div id="tables-content"></div></section>
+<section id="photos-panel" class="panel" hidden aria-labelledby="photos-title"><div class="section-heading"><h2 id="photos-title">Fotos e legendas</h2><span>Imagens inseridas na posição do modelo</span></div><div id="photos-content" class="photo-grid"></div></section>
+<section id="review-panel" class="panel" hidden aria-labelledby="review-title"><div class="section-heading"><h2 id="review-title">Revisão e geração</h2><span>Confira antes de baixar</span></div><div id="review-content"></div><div class="review-actions"><button id="preview-report" type="button">Visualizar relatório</button><button id="generate-report" type="button" class="primary">Gerar relatório Word</button></div><div id="document-preview" class="document-preview" hidden></div></section>
+<div class="bottom-nav"><button id="previous-step" type="button" hidden>Etapa anterior</button><span id="step-count">Etapa 1 de 4</span><button id="next-step" type="button" class="primary">Continuar para tabelas</button></div>
+<footer><span class="footer-dot"></span> Hub operacional OpenBlast<span class="privacy">Dados e fotos ficam no seu navegador.</span></footer>
+</main><script src="vendor/jszip.min.js"></script><script src="vendor/docx-preview.min.js"></script><script type="module" src="app.js"></script>
+</body></html>

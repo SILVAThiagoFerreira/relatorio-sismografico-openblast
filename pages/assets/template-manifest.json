@@ -1,0 +1,1387 @@
+{
+  "version": 1,
+  "template": {
+    "url": "assets/template.docx",
+    "sha256": "c96fd6368c72c399aafd4f39380845e53637a43bbe56f1f7bbe6b2db21055ddf",
+    "size": 1237400
+  },
+  "visual": {
+    "brand": "OpenBlast",
+    "title": "Relatório Sismográfico",
+    "primary": "#e60012",
+    "header": "#354047"
+  },
+  "limits": {
+    "max_image_bytes": 25000000,
+    "max_project_bytes": 200000000
+  },
+  "repeatableSections": {
+    "maxBlasts": 3,
+    "blastPhoto": {
+      "templateRange": [
+        116,
+        131
+      ],
+      "insertBeforeBlock": 132,
+      "pageBreakBlock": 132,
+      "imageOffset": 0,
+      "captionOffset": 15,
+      "label": "Local do desmonte"
+    },
+    "blastAnnex": {
+      "fullRange": [
+        323,
+        356
+      ],
+      "planRange": [
+        323,
+        336
+      ],
+      "timingRange": [
+        338,
+        353
+      ],
+      "histogramRange": [
+        354,
+        356
+      ],
+      "pageBreakBlock": 356,
+      "insertBeforeBlock": 357,
+      "planImageOffset": 4,
+      "timingImageOffset": 16,
+      "histogramImageOffset": 32
+    }
+  },
+  "fields": [
+    {
+      "id": "period",
+      "label": "Período de monitoramento",
+      "blockIndex": 14,
+      "default": "",
+      "required": true,
+      "group": "identification",
+      "prefix": "PERÍODO ",
+      "type": "text",
+      "hint": "Selecione a data do monitoramento.",
+      "defaultValue": "",
+      "section": "identification",
+      "original": "PERÍODO ",
+      "textNodes": [
+        "PERÍODO ",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "placeYear",
+      "label": "Cidade e ano",
+      "blockIndex": 24,
+      "default": "CRAÍBAS, 2026",
+      "required": true,
+      "group": "identification",
+      "defaultValue": "CRAÍBAS, 2026",
+      "type": "text",
+      "section": "identification",
+      "original": "CRAÍBAS, 2026",
+      "textNodes": [
+        "CRAÍBAS,",
+        " ",
+        "202",
+        "6"
+      ]
+    },
+    {
+      "id": "blastCaption1",
+      "label": "Figura 3.1 — Local do desmonte",
+      "blockIndex": 115,
+      "default": "Figura 3.1 – Local do desmonte – .",
+      "required": true,
+      "group": "blast",
+      "defaultValue": "Figura 3.1 – Local do desmonte – .",
+      "type": "text",
+      "section": "blast",
+      "original": "",
+      "textNodes": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "blastCaption2",
+      "label": "Figura 3.2 — Local do desmonte",
+      "blockIndex": 131,
+      "default": "Figura 3.2 – Local do desmonte – .",
+      "required": true,
+      "group": "blast",
+      "defaultValue": "Figura 3.2 – Local do desmonte – .",
+      "type": "text",
+      "section": "blast",
+      "original": "",
+      "textNodes": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "mapCaption",
+      "label": "Figura 4 — Perspectiva de distância",
+      "blockIndex": 137,
+      "default": "Figura 4 – Perspectiva de distância entre os desmontes e as comunidades acompanhadas.",
+      "required": true,
+      "group": "locations",
+      "defaultValue": "Figura 4 – Perspectiva de distância entre os desmontes e as comunidades acompanhadas.",
+      "type": "text",
+      "section": "locations",
+      "original": "Figura 4 – Perspectiva de distância entre os desmontes e as comunidades acompanhadas.",
+      "textNodes": [
+        "Fig",
+        "ura 4",
+        " –",
+        " ",
+        "Perspectiva de distância entre os desmontes e as comunidades acompanhadas."
+      ]
+    },
+    {
+      "id": "monitorCaption1",
+      "label": "Figura 5.1 — Monitoramento 01",
+      "blockIndex": 171,
+      "default": "Figura 5.1 – Local de monitoramento 01 com sismógrafo instalado.",
+      "required": true,
+      "group": "locations",
+      "defaultValue": "Figura 5.1 – Local de monitoramento 01 com sismógrafo instalado.",
+      "type": "text",
+      "section": "locations",
+      "original": " Figura 5.1 – Local de monitoramento 01 com sismógrafo instalado.",
+      "textNodes": [
+        " Figura ",
+        "5.1",
+        " –",
+        " ",
+        "Local de monitoramento 01 com sismógrafo instalado."
+      ]
+    },
+    {
+      "id": "monitorCaption2",
+      "label": "Figura 5.2 — Monitoramento 02",
+      "blockIndex": 192,
+      "default": "Figura 5.2 – Local de monitoramento 02 com sismógrafo instalado.",
+      "required": true,
+      "group": "locations",
+      "defaultValue": "Figura 5.2 – Local de monitoramento 02 com sismógrafo instalado.",
+      "type": "text",
+      "section": "locations",
+      "original": "Figura 5.2 – Local de monitoramento 02 com sismógrafo instalado.",
+      "textNodes": [
+        "Figura ",
+        "5",
+        ".",
+        "2",
+        " –",
+        " ",
+        "Local de monitoramento 02 com sismógrafo instalado."
+      ]
+    },
+    {
+      "id": "monitorCaption3",
+      "label": "Figura 5.3 — Monitoramento 03",
+      "blockIndex": 207,
+      "default": "Figura 5.3 – Local de monitoramento 03 com sismógrafo instalado.",
+      "required": true,
+      "group": "locations",
+      "defaultValue": "Figura 5.3 – Local de monitoramento 03 com sismógrafo instalado.",
+      "type": "text",
+      "section": "locations",
+      "original": "Figura 5.3 – Local de monitoramento 03 com sismógrafo instalado.",
+      "textNodes": [
+        "Figura ",
+        "5",
+        ".",
+        "3",
+        " –",
+        " ",
+        "Local de monitoramento 03 com sismógrafo instalado."
+      ]
+    },
+    {
+      "id": "seismoCaption1",
+      "label": "Figura 6.1 — Sismograma 01",
+      "blockIndex": 245,
+      "default": "Figura 6.1 – Sismograma - Monitoramento 01.",
+      "required": true,
+      "group": "measurements",
+      "defaultValue": "Figura 6.1 – Sismograma - Monitoramento 01.",
+      "type": "text",
+      "section": "measurements",
+      "original": "Figura 6.1 – Sismograma - Monitoramento 01.",
+      "textNodes": [
+        "Figura ",
+        "6",
+        ".1",
+        " –",
+        " ",
+        "Sismograma - Monitoramento 01."
+      ]
+    },
+    {
+      "id": "seismoCaption2",
+      "label": "Figura 6.2 — Sismograma 02",
+      "blockIndex": 275,
+      "default": "Figura 6.2 – Sismograma - Monitoramento 02.",
+      "required": true,
+      "group": "measurements",
+      "defaultValue": "Figura 6.2 – Sismograma - Monitoramento 02.",
+      "type": "text",
+      "section": "measurements",
+      "original": "Figura 6.2 – Sismograma - Monitoramento 02.",
+      "textNodes": [
+        "Figura ",
+        "6",
+        ".2",
+        " –",
+        " ",
+        "Sismograma - Monitoramento 0",
+        "2",
+        "."
+      ]
+    },
+    {
+      "id": "seismoCaption3",
+      "label": "Figura 6.3 — Sismograma 03",
+      "blockIndex": 305,
+      "default": "Figura 6.3 – Sismograma - Monitoramento 03.",
+      "required": true,
+      "group": "measurements",
+      "defaultValue": "Figura 6.3 – Sismograma - Monitoramento 03.",
+      "type": "text",
+      "section": "measurements",
+      "original": "Figura 6.3 – Sismograma - Monitoramento 03.",
+      "textNodes": [
+        "Figura ",
+        "6",
+        ".3",
+        " –",
+        " ",
+        "Sismograma - Monitoramento 0",
+        "3",
+        "."
+      ]
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusão técnica",
+      "blockIndex": 312,
+      "default": "",
+      "required": false,
+      "group": "conclusion",
+      "visible": false,
+      "defaultValue": "",
+      "type": "textarea",
+      "section": "conclusion",
+      "original": "",
+      "textNodes": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "conclusionFinal",
+      "label": "Considerações finais",
+      "blockIndex": 314,
+      "default": "",
+      "required": false,
+      "group": "conclusion",
+      "visible": false,
+      "defaultValue": "",
+      "type": "textarea",
+      "section": "conclusion",
+      "original": "",
+      "textNodes": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "annexBlast",
+      "label": "Identificação do desmonte no Anexo I",
+      "blockIndex": 323,
+      "default": "",
+      "required": false,
+      "group": "annexes",
+      "replacement": "PP [IDENTIFICAÇÃO]",
+      "visible": false,
+      "defaultValue": "",
+      "type": "text",
+      "section": "annexes",
+      "original": "ANEXO I – PP [IDENTIFICAÇÃO]Dados pertinentes ao Desmonte de RochaANEXO I – PP [IDENTIFICAÇÃO]Dados pertinentes ao Desmonte de Rocha",
+      "textNodes": [
+        "ANEXO I – ",
+        "PP [IDENTIFICAÇÃO]",
+        "",
+        "Dados pertinentes ao ",
+        "D",
+        "esmonte de ",
+        "R",
+        "ocha",
+        "ANEXO I – ",
+        "PP [IDENTIFICAÇÃO]",
+        "",
+        "Dados pertinentes ao ",
+        "D",
+        "esmonte de ",
+        "R",
+        "ocha"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "company",
+      "label": "Tabela 1 — Empresa",
+      "blockIndex": 49,
+      "headerRows": 0,
+      "editableColumns": [
+        1
+      ],
+      "group": "identification",
+      "rows": [
+        [
+          "Razão Social da Empresa",
+          "Mineração Vale Verde do Brasil Ltda"
+        ],
+        [
+          "Endereço da Unidade",
+          "ROD. AL-486, KM 4, Sítio Lagoa do Mel, Zona Rural, Craíbas-AL"
+        ]
+      ],
+      "section": "identification",
+      "dataStartRow": 0,
+      "editableCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "mode": "fixed"
+    },
+    {
+      "id": "blast",
+      "label": "Tabela 2 — Perfuração e desmonte",
+      "blockIndex": 98,
+      "headerRows": 1,
+      "editableColumns": [
+        2
+      ],
+      "repeatColumns": true,
+      "group": "blast",
+      "maxRepeatCount": 3,
+      "rows": [
+        [
+          "Parâmetros de Perfuração & Desmonte"
+        ],
+        [
+          "N° do desmonte",
+          "-",
+          ""
+        ],
+        [
+          "Hora do desmonte",
+          "-",
+          ""
+        ],
+        [
+          "Diâmetro do furo",
+          "pol",
+          ""
+        ],
+        [
+          "Afastamento (A)",
+          "m",
+          ""
+        ],
+        [
+          "Espaçamento (E)",
+          "m",
+          ""
+        ],
+        [
+          "Tampão",
+          "m",
+          ""
+        ],
+        [
+          "Altura da bancada",
+          "m",
+          ""
+        ],
+        [
+          "Inclinação do furo",
+          "°",
+          ""
+        ],
+        [
+          "Subfuração",
+          "m",
+          ""
+        ],
+        [
+          "Profundidade média dos furos",
+          "m",
+          ""
+        ],
+        [
+          "Carga Méd./Furo",
+          "kg",
+          ""
+        ],
+        [
+          "Carga Max./Espera",
+          "kg",
+          ""
+        ],
+        [
+          "Razão Linear de carga",
+          "kg/m",
+          ""
+        ],
+        [
+          "N° total de furos",
+          "uni",
+          ""
+        ],
+        [
+          "Volume desmontado",
+          "m³",
+          ""
+        ],
+        [
+          "Massa desmontada",
+          "t",
+          ""
+        ],
+        [
+          "Total de explosivos",
+          "kg",
+          ""
+        ],
+        [
+          "Razão de carga",
+          "g/t",
+          ""
+        ]
+      ],
+      "section": "blast",
+      "dataStartRow": 1,
+      "editableCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 3,
+          "col": 2
+        },
+        {
+          "row": 4,
+          "col": 2
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 2
+        },
+        {
+          "row": 7,
+          "col": 2
+        },
+        {
+          "row": 8,
+          "col": 2
+        },
+        {
+          "row": 9,
+          "col": 2
+        },
+        {
+          "row": 10,
+          "col": 2
+        },
+        {
+          "row": 11,
+          "col": 2
+        },
+        {
+          "row": 12,
+          "col": 2
+        },
+        {
+          "row": 13,
+          "col": 2
+        },
+        {
+          "row": 14,
+          "col": 2
+        },
+        {
+          "row": 15,
+          "col": 2
+        },
+        {
+          "row": 16,
+          "col": 2
+        },
+        {
+          "row": 17,
+          "col": 2
+        },
+        {
+          "row": 18,
+          "col": 2
+        }
+      ],
+      "mode": "blastColumns"
+    },
+    {
+      "id": "locations",
+      "label": "Tabela 3 — Coordenadas e distâncias",
+      "blockIndex": 150,
+      "headerRows": 2,
+      "repeatRows": true,
+      "group": "locations",
+      "multilineColumns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "rows": [
+        [
+          "Coordenadas UTM",
+          "Distância (s) ao Desmonte (s)"
+        ],
+        [
+          "Desmonte",
+          "X(Mina)",
+          "Y(Mina)",
+          "Local de Monitoramento",
+          "ReferênciaMonitoramento(GMD)",
+          "ReferênciaMina(GMD)",
+          "Distância(m)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "section": "locations",
+      "dataStartRow": 2,
+      "editableCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 3
+        },
+        {
+          "row": 2,
+          "col": 4
+        },
+        {
+          "row": 2,
+          "col": 5
+        },
+        {
+          "row": 2,
+          "col": 6
+        },
+        {
+          "row": 3,
+          "col": 0
+        },
+        {
+          "row": 3,
+          "col": 1
+        },
+        {
+          "row": 3,
+          "col": 2
+        },
+        {
+          "row": 3,
+          "col": 3
+        },
+        {
+          "row": 3,
+          "col": 4
+        },
+        {
+          "row": 3,
+          "col": 5
+        },
+        {
+          "row": 3,
+          "col": 6
+        },
+        {
+          "row": 4,
+          "col": 0
+        },
+        {
+          "row": 4,
+          "col": 1
+        },
+        {
+          "row": 4,
+          "col": 2
+        },
+        {
+          "row": 4,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 4
+        },
+        {
+          "row": 4,
+          "col": 5
+        },
+        {
+          "row": 4,
+          "col": 6
+        }
+      ],
+      "mode": "rows"
+    },
+    {
+      "id": "instruments",
+      "label": "Tabela 4 — Sismógrafos",
+      "blockIndex": 155,
+      "headerRows": 1,
+      "repeatRows": true,
+      "group": "locations",
+      "inputTypes": {
+        "4": "date"
+      },
+      "rows": [
+        [
+          "Ordem",
+          "Marca",
+          "Modelo",
+          "Nº de Série",
+          "Data de Calibração"
+        ],
+        [
+          "01",
+          "Instantel",
+          "Micromate",
+          "",
+          ""
+        ],
+        [
+          "02",
+          "Instantel",
+          "Micromate",
+          "",
+          ""
+        ],
+        [
+          "03",
+          "Instantel",
+          "Micromate",
+          "",
+          ""
+        ]
+      ],
+      "section": "locations",
+      "dataStartRow": 1,
+      "editableCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 1,
+          "col": 4
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 3
+        },
+        {
+          "row": 2,
+          "col": 4
+        },
+        {
+          "row": 3,
+          "col": 0
+        },
+        {
+          "row": 3,
+          "col": 1
+        },
+        {
+          "row": 3,
+          "col": 2
+        },
+        {
+          "row": 3,
+          "col": 3
+        },
+        {
+          "row": 3,
+          "col": 4
+        }
+      ],
+      "mode": "rows"
+    },
+    {
+      "id": "measurements",
+      "label": "Tabela 5 — Registros sismográficos",
+      "blockIndex": 215,
+      "headerRows": 3,
+      "repeatRows": true,
+      "group": "measurements",
+      "rows": [
+        [
+          "Monitoramento",
+          "Velocidades de Pico e Frequências",
+          "Pressão Acústica"
+        ],
+        [
+          "",
+          "Transversal",
+          "Vertical",
+          "Longitudinal",
+          "Resultante",
+          ""
+        ],
+        [
+          "",
+          "(mm/s)",
+          "(Hz)",
+          "(mm/s)",
+          "(Hz)",
+          "(mm/s)",
+          "(Hz)",
+          "(mm/s)",
+          "(dB)"
+        ],
+        [
+          "01",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "02",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "03",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "section": "measurements",
+      "dataStartRow": 3,
+      "editableCells": [
+        {
+          "row": 3,
+          "col": 0
+        },
+        {
+          "row": 3,
+          "col": 1
+        },
+        {
+          "row": 3,
+          "col": 2
+        },
+        {
+          "row": 3,
+          "col": 3
+        },
+        {
+          "row": 3,
+          "col": 4
+        },
+        {
+          "row": 3,
+          "col": 5
+        },
+        {
+          "row": 3,
+          "col": 6
+        },
+        {
+          "row": 3,
+          "col": 7
+        },
+        {
+          "row": 3,
+          "col": 8
+        },
+        {
+          "row": 4,
+          "col": 0
+        },
+        {
+          "row": 4,
+          "col": 1
+        },
+        {
+          "row": 4,
+          "col": 2
+        },
+        {
+          "row": 4,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 4
+        },
+        {
+          "row": 4,
+          "col": 5
+        },
+        {
+          "row": 4,
+          "col": 6
+        },
+        {
+          "row": 4,
+          "col": 7
+        },
+        {
+          "row": 4,
+          "col": 8
+        },
+        {
+          "row": 5,
+          "col": 0
+        },
+        {
+          "row": 5,
+          "col": 1
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 5,
+          "col": 3
+        },
+        {
+          "row": 5,
+          "col": 4
+        },
+        {
+          "row": 5,
+          "col": 5
+        },
+        {
+          "row": 5,
+          "col": 6
+        },
+        {
+          "row": 5,
+          "col": 7
+        },
+        {
+          "row": 5,
+          "col": 8
+        }
+      ],
+      "mode": "rows"
+    },
+    {
+      "id": "companyConclusion",
+      "label": "Tabela 6 — Empresa",
+      "blockIndex": 317,
+      "headerRows": 0,
+      "editableColumns": [
+        1
+      ],
+      "group": "conclusion",
+      "rows": [
+        [
+          "Razão Social da Empresa",
+          "Mineração Vale Verde do Brasil Ltda"
+        ],
+        [
+          "Endereço da Unidade",
+          "ROD. AL-486, KM 4, Sítio Lagoa do Mel, Zona Rural, Craíbas-AL"
+        ]
+      ],
+      "section": "conclusion",
+      "dataStartRow": 0,
+      "editableCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "mode": "fixed"
+    },
+    {
+      "id": "engineer",
+      "label": "Tabela 7 — Responsável técnico",
+      "blockIndex": 320,
+      "headerRows": 1,
+      "group": "conclusion",
+      "clearColumns": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        [
+          "Nome",
+          "Cargo/Função",
+          "Nº CREA",
+          "Assinatura"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "section": "conclusion",
+      "dataStartRow": 1,
+      "editableCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        }
+      ],
+      "mode": "fixed"
+    }
+  ],
+  "images": [
+    {
+      "id": "image_101_0",
+      "label": "Local do desmonte 1",
+      "blockIndex": 101,
+      "occurrence": 0,
+      "originalRelationship": "rId15",
+      "captionId": "blastCaption1",
+      "captionFieldId": "blastCaption1",
+      "group": "blast",
+      "section": "blast",
+      "widthEmu": 6739255,
+      "heightEmu": 3686175,
+      "required": true
+    },
+    {
+      "id": "image_116_0",
+      "label": "Local do desmonte 2",
+      "blockIndex": 116,
+      "occurrence": 0,
+      "originalRelationship": "rId15",
+      "captionId": "blastCaption2",
+      "captionFieldId": "blastCaption2",
+      "group": "blast",
+      "section": "blast",
+      "widthEmu": 6739255,
+      "heightEmu": 3686175,
+      "required": true
+    },
+    {
+      "id": "image_136_0",
+      "label": "Mapa dos desmontes e monitoramentos",
+      "blockIndex": 136,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "mapCaption",
+      "captionFieldId": "mapCaption",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 6095365,
+      "heightEmu": 3686175,
+      "required": true
+    },
+    {
+      "id": "image_158_0",
+      "label": "Monitoramento 01 — foto 1",
+      "blockIndex": 158,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "monitorCaption1",
+      "captionFieldId": "monitorCaption1",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 2369488,
+      "heightEmu": 3212327,
+      "required": true
+    },
+    {
+      "id": "image_158_1",
+      "label": "Monitoramento 01 — foto 2",
+      "blockIndex": 158,
+      "occurrence": 1,
+      "originalRelationship": "rId17",
+      "captionId": "monitorCaption1",
+      "captionFieldId": "monitorCaption1",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 2369488,
+      "heightEmu": 3212327,
+      "required": true
+    },
+    {
+      "id": "image_173_0",
+      "label": "Monitoramento 02 — foto 1",
+      "blockIndex": 173,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "monitorCaption2",
+      "captionFieldId": "monitorCaption2",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 2369488,
+      "heightEmu": 3212327,
+      "required": true
+    },
+    {
+      "id": "image_173_1",
+      "label": "Monitoramento 02 — foto 2",
+      "blockIndex": 173,
+      "occurrence": 1,
+      "originalRelationship": "rId17",
+      "captionId": "monitorCaption2",
+      "captionFieldId": "monitorCaption2",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 2369617,
+      "heightEmu": 3212236,
+      "required": true
+    },
+    {
+      "id": "image_194_0",
+      "label": "Monitoramento 03 — foto 1",
+      "blockIndex": 194,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "monitorCaption3",
+      "captionFieldId": "monitorCaption3",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 2369488,
+      "heightEmu": 3212327,
+      "required": true
+    },
+    {
+      "id": "image_194_1",
+      "label": "Monitoramento 03 — foto 2",
+      "blockIndex": 194,
+      "occurrence": 1,
+      "originalRelationship": "rId17",
+      "captionId": "monitorCaption3",
+      "captionFieldId": "monitorCaption3",
+      "group": "locations",
+      "section": "locations",
+      "widthEmu": 2369488,
+      "heightEmu": 3212327,
+      "required": true
+    },
+    {
+      "id": "image_217_0",
+      "label": "Sismograma 01",
+      "blockIndex": 217,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "seismoCaption1",
+      "captionFieldId": "seismoCaption1",
+      "group": "measurements",
+      "section": "measurements",
+      "widthEmu": 5120613,
+      "heightEmu": 7241512,
+      "required": true
+    },
+    {
+      "id": "image_247_0",
+      "label": "Sismograma 02",
+      "blockIndex": 247,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "seismoCaption2",
+      "captionFieldId": "seismoCaption2",
+      "group": "measurements",
+      "section": "measurements",
+      "widthEmu": 5120613,
+      "heightEmu": 7241512,
+      "required": true
+    },
+    {
+      "id": "image_277_0",
+      "label": "Sismograma 03",
+      "blockIndex": 277,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": "seismoCaption3",
+      "captionFieldId": "seismoCaption3",
+      "group": "measurements",
+      "section": "measurements",
+      "widthEmu": 5120613,
+      "heightEmu": 7241512,
+      "required": true
+    },
+    {
+      "id": "image_327_0",
+      "label": "Plano de Fogo – Realizado",
+      "blockIndex": 327,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "annexes",
+      "section": "annexes",
+      "widthEmu": 5809587,
+      "heightEmu": 2449001,
+      "required": true
+    },
+    {
+      "id": "image_339_0",
+      "label": "Tier-Up Plan – Temporização",
+      "blockIndex": 339,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "annexes",
+      "section": "annexes",
+      "widthEmu": 5808980,
+      "heightEmu": 3731868,
+      "required": true
+    },
+    {
+      "id": "image_355_0",
+      "label": "Histograma - Carga",
+      "blockIndex": 355,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "annexes",
+      "section": "annexes",
+      "widthEmu": 5808980,
+      "heightEmu": 3731260,
+      "required": true
+    },
+    {
+      "id": "image_361_0",
+      "label": "Certificado 01",
+      "blockIndex": 361,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "annexes",
+      "section": "annexes",
+      "widthEmu": 5809587,
+      "heightEmu": 6576365,
+      "required": true
+    },
+    {
+      "id": "image_385_0",
+      "label": "Certificado 02",
+      "blockIndex": 385,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "annexes",
+      "section": "annexes",
+      "widthEmu": 5809587,
+      "heightEmu": 6576365,
+      "required": true
+    },
+    {
+      "id": "image_409_0",
+      "label": "Certificado 03",
+      "blockIndex": 409,
+      "occurrence": 0,
+      "originalRelationship": "rId17",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "annexes",
+      "section": "annexes",
+      "widthEmu": 5809587,
+      "heightEmu": 6576365,
+      "required": true
+    },
+    {
+      "id": "image_320_0",
+      "label": "Assinatura do responsável técnico",
+      "blockIndex": 320,
+      "occurrence": 0,
+      "originalRelationship": "rId19",
+      "captionId": null,
+      "captionFieldId": null,
+      "group": "conclusion",
+      "section": "conclusion",
+      "widthEmu": 700400,
+      "heightEmu": 399851,
+      "required": false
+    }
+  ],
+  "sections": [
+    "<w:sectPr xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidR=\"00AA1B08\" w:rsidSect=\"00E526F2\"><w:headerReference w:type=\"default\" r:id=\"rId21\" /><w:footerReference w:type=\"default\" r:id=\"rId22\" /><w:pgSz w:w=\"11909\" w:h=\"16834\" w:code=\"9\" /><w:pgMar w:top=\"1701\" w:right=\"1134\" w:bottom=\"1134\" w:left=\"1134\" w:header=\"425\" w:footer=\"567\" w:gutter=\"0\" /><w:cols w:space=\"720\" /><w:docGrid w:linePitch=\"360\" /></w:sectPr>"
+  ]
+}
