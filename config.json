@@ -29,8 +29,21 @@
         "to": "PP [IDENTIFICAÇÃO]"
       }
     },
-    "clear_core_properties": ["title", "subject", "creator", "lastModifiedBy", "keywords", "lastPrinted", "revision"],
-    "clear_app_properties": ["Template", "Company", "TitlesOfParts", "HeadingPairs"],
+    "clear_core_properties": [
+      "title",
+      "subject",
+      "creator",
+      "lastModifiedBy",
+      "keywords",
+      "lastPrinted",
+      "revision"
+    ],
+    "clear_app_properties": [
+      "Template",
+      "Company",
+      "TitlesOfParts",
+      "HeadingPairs"
+    ],
     "clear_custom_properties": true
   },
   "fields": [
@@ -357,5 +370,24 @@
       "timingImageOffset": 16,
       "histogramImageOffset": 32
     }
+  },
+  "visual_style": {
+    "titleColor": "B5121B",
+    "subtitleColor": "4A4F55",
+    "hairlineColor": "E3E3E3",
+    "titleBlock": {
+      "blockIndex": 9,
+      "textContains": "RELAT"
+    },
+    "subtitleBlocks": [
+      {
+        "blockIndex": 11,
+        "textContains": "VALE-VERDE"
+      },
+      {
+        "blockIndex": 12,
+        "textContains": "CRA"
+      }
+    ]
   }
 }

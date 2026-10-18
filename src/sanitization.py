@@ -81,6 +81,67 @@ def _replace_text(node: ET.Element, needle: str, replacement: str) -> None:
             last[0].text = last[3][end-last[1]:]
 
 
+_RPR_AFTER_COLOR = {'spacing', 'w', 'kern', 'position', 'sz', 'szCs', 'highlight', 'u', 'effect',
+                    'bdr', 'shd', 'fitText', 'vertAlign', 'rtl', 'cs', 'em', 'lang',
+                    'eastAsianLayout', 'specVanish', 'oMath'}
+_VERTICAL_BORDERS = {'left', 'right', 'start', 'end', 'insideV'}
+_HORIZONTAL_BORDERS = {'top', 'bottom', 'insideH'}
+
+
+def _set_run_color(run, hex_color: str) -> None:
+    """Set a run colour, inserting w:color at its schema position inside w:rPr."""
+    rpr = run.find(f'{{{W}}}rPr')
+    if rpr is None:
+        rpr = ET.Element(f'{{{W}}}rPr')
+        run.insert(0, rpr)
+    color = rpr.find(f'{{{W}}}color')
+    if color is None:
+        color = ET.Element(f'{{{W}}}color')
+        position = len(rpr)
+        for index, child in enumerate(list(rpr)):
+            if child.tag.split('}')[-1] in _RPR_AFTER_COLOR:
+                position = index
+                break
+        rpr.insert(position, color)
+    color.attrib.pop(f'{{{W}}}themeColor', None)
+    color.set(f'{{{W}}}val', hex_color)
+
+
+def _restyle_borders(root: ET.Element, hairline: str) -> None:
+    """Keep only thin horizontal rules: vertical cell/table borders become nil."""
+    for container in list(root.iter(f'{{{W}}}tcBorders')) + list(root.iter(f'{{{W}}}tblBorders')):
+        for child in list(container):
+            local = child.tag.split('}')[-1]
+            if local in _VERTICAL_BORDERS:
+                child.attrib.clear()
+                child.set(f'{{{W}}}val', 'nil')
+            elif local in _HORIZONTAL_BORDERS and child.get(f'{{{W}}}val') == 'single':
+                child.set(f'{{{W}}}sz', '4')
+                child.set(f'{{{W}}}color', hairline)
+                child.attrib.pop(f'{{{W}}}themeColor', None)
+
+
+def _apply_visual_style(document: ET.Element, body: list, style: dict) -> None:
+    """Apply the configured report look (red title, grey subtitle, hairline tables)."""
+    if not style:
+        return
+    def check(block_index: int, expected: str) -> ET.Element:
+        element = body[block_index]
+        text = ''.join(t.text or '' for t in element.iter(f'{{{W}}}t'))
+        if expected not in text:
+            raise ValueError(f'Bloco {block_index} não corresponde ao estilo configurado: {expected!r}')
+        return element
+    title = check(style['titleBlock']['blockIndex'], style['titleBlock']['textContains'])
+    for run in title.iter(f'{{{W}}}r'):
+        _set_run_color(run, style['titleColor'])
+    for subtitle in style.get('subtitleBlocks', []):
+        element = check(subtitle['blockIndex'], subtitle['textContains'])
+        for run in element.iter(f'{{{W}}}r'):
+            _set_run_color(run, style['subtitleColor'])
+    _restyle_borders(document, style['hairlineColor'])
+
+
+
 def sanitize_template(raw: bytes, config: dict) -> bytes:
     """Strip stale report data and private signature pixels from the public model."""
     source = BytesIO(raw)
@@ -116,6 +177,8 @@ def sanitize_template(raw: bytes, config: dict) -> bytes:
                 for index in clear:
                     if index < len(cells):
                         _write_paragraph_value(cells[index], '')
+
+        _apply_visual_style(document, body, config.get('visual_style'))
 
         relationship_overrides = {}
         relationship_root = ET.fromstring(original.read('word/_rels/document.xml.rels'))

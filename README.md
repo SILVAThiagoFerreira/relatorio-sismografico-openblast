@@ -21,6 +21,7 @@ O manifesto vincula o site ao SHA-256 da cópia sanitizada. A geração valida e
 
 - `main.py` só orquestra a leitura, validação, sanitização, manifesto, saída e log.
 - `config.json` define campos, tabelas, imagens, intervalos repetíveis, visual, limites e regras de sanitização.
+- `config.json > visual_style` define o estilo do modelo público: título vermelho em caixa alta, subtítulo cinza e tabelas com apenas fios horizontais (bordas verticais viram `nil`). Ele é aplicado pelo `main.py` ao gerar `pages/assets/template.docx`.
 - `src/` contém os módulos da preparação Python.
 - `pages/` contém a interface, validador e gerador OOXML do lado do cliente.
 - `tests/` verifica o contrato, a sanitização, os arquivos DOCX e casos com um a três desmontes.

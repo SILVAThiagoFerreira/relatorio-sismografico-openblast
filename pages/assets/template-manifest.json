@@ -2,8 +2,8 @@
   "version": 1,
   "template": {
     "url": "assets/template.docx",
-    "sha256": "c96fd6368c72c399aafd4f39380845e53637a43bbe56f1f7bbe6b2db21055ddf",
-    "size": 1237400
+    "sha256": "bce11d9585ed8b7bf9d03091182d5b5decfa143c574ace70b7787a802167643e",
+    "size": 1237353
   },
   "visual": {
     "brand": "OpenBlast",
