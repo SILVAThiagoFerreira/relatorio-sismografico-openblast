@@ -3,3 +3,11 @@
 .omit-photo{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:400;margin-bottom:14px}.omit-photo input{width:16px;min-height:16px;height:16px;margin:0;accent-color:var(--red)}
 
 .annex-options{grid-column:1/-1;border:1px solid var(--border);padding:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.annex-options h3,.annex-options p{grid-column:1/-1;margin:0}.annex-options h3{font-size:14px}@media(max-width:760px){.annex-options{grid-template-columns:1fr}}
+
+/* Redesign v3: página branca, espaçamento compacto e fios finos. */
+.masthead{height:50px;background:#fff;color:var(--graphite);border-bottom:1px solid var(--border)}
+.brand span{color:var(--graphite)}
+.brand img{filter:none}
+main{margin-top:16px}
+.intro{padding:0 0 16px}
+.projectbar{padding:14px 0}
